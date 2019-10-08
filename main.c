@@ -5,19 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	
-	int num=0;
-	char c;
+	int answer=71;
+	int input;
+	int cnt=0;
 	
-	printf("input a string : ");
-	
-	while ((c=getchar())!='\n')
-	{
-		if(c<= '9' && c>='0')
+	do
+	 {
+	 	printf("input a number:");
+	 	scanf("%d", &input);
+	 	if(input<answer)
+	 	{
+	 		printf("low\n");
+		 }
+		else if(input>answer)
 		{
-			num++;
+			printf("high\n");
 		}
-	}
-	printf("%i\n", num);
+	 	cnt++;
+	 } 
+	while(input !=answer);
+	
+	printf("congratulation. trial:%i\n", cnt);
 	 
 	return 0;
 }
